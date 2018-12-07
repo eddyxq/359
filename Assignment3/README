@@ -1,0 +1,4 @@
+This is the bonus version:
+-busy loops are replaced with hardware timers instead
+
+Type make in commandline to compile.
