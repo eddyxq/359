@@ -330,22 +330,22 @@ void init_GPIO17_to_output()
     *GPPUDCLK0 = 0;
 }
 
-//This function sets the GPIO output pin 23 to a 1 (high) level.
+//This function sets the GPIO output pin 17 to a 1 (high) level.
 void set_GPIO17()
 {
 	  register unsigned int r;
 	  
-	  // Put a 1 into the SET23 field of the GPIO Pin Output Set Register 0
+	  // Put a 1 into the SET17 field of the GPIO Pin Output Set Register 0
 	  r = (0x1 << 17);
 	  *GPSET0 = r;
 }
 
-// This function clears the GPIO output pin 23 to a 0 (low) level.
+// This function clears the GPIO output pin 17 to a 0 (low) level.
 void clear_GPIO17()
 {
 	  register unsigned int r;
 	  
-	  // Put a 1 into the CLR23 field of the GPIO Pin Output Clear Register 0
+	  // Put a 1 into the CLR17 field of the GPIO Pin Output Clear Register 0
 	  r = (0x1 << 17);
 	  *GPCLR0 = r;
 }
@@ -363,7 +363,7 @@ void init_GPIO27_to_output()
     // We clear the bits by ANDing with a 000 bit pattern in the field.
     r &= ~(0x7 << 21);
 
-    // Set the field FSEL23 to 001, which sets pin 27 to an output pin.
+    // Set the field FSEL27 to 001, which sets pin 27 to an output pin.
     // We do so by ORing the bit pattern 001 into the field.
     r |= (0x1 << 21);
 
@@ -403,7 +403,7 @@ void init_GPIO27_to_output()
     *GPPUDCLK0 = 0;
 }
 
-// This function sets the GPIO output pin 23 to a 1 (high) level.
+// This function sets the GPIO output pin 27 to a 1 (high) level.
 void set_GPIO27()
 {
 	  register unsigned int r;
